@@ -203,6 +203,17 @@ nav a:hover{
   border-radius:36px;
 }
 
+.hero-content{
+  transition:opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hero-content.hide{
+  opacity:0;
+  transform:translateY(-60px);
+  pointer-events:none;
+}
+
+
 .hero-label{
   display:inline-block;
   color:var(--accent);
@@ -219,6 +230,7 @@ nav a:hover{
   margin-bottom:18px;
   letter-spacing:-0.04em;
   color:var(--text);
+  
 }
 
 .hero-content p{

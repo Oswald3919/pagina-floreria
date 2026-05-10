@@ -100,4 +100,20 @@ contactForm?.addEventListener('submit', (e) => {
 });
 
 // Fondo dinámico removido - ahora fondos sólidos
+document.addEventListener('DOMContentLoaded', () => {
+  const heroContent = document.querySelector('.hero-content');
 
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    const maxScroll = 300;
+    let opacity = 1 - (scrollY / maxScroll);
+
+    if (opacity < 0) opacity = 0;
+    if (opacity > 1) opacity = 1;
+
+    heroContent.style.opacity = opacity;
+
+    heroContent.style.transform = `translateY(${scrollY * -0.2}px)`;
+  });
+});
