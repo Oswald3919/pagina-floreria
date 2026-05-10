@@ -45,3 +45,22 @@ document.querySelectorAll('.navbar nav a').forEach(link => {
 heroButton?.addEventListener('click', () => {
   document.querySelector('.catalog')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+const contactForm = document.querySelector('.contact-form');
+contactForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !message) {
+    alert('Por favor, completa todos los campos.');
+    return;
+  }
+
+  const whatsappMessage = `Hola, soy ${name}. Mi email es ${email}. Mi pedido: ${message}`;
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+  const whatsappUrl = `https://wa.me/523340187767?text=${encodedMessage}`;
+
+  window.open(whatsappUrl, '_blank');
+});
