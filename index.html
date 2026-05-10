@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nara Florería</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Nara Florería">
+    </div>
+
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#catalog">Colección</a>
+      <a href="#festividades">Momentos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-label">Nara Florería</span>
+      <h1>Las flores dicen lo que no sabemos expresar</h1>
+
+      <p>
+        Arreglos románticos, mínimos y llenos de delicadeza desde Tonalá, Jalisco. Cada ramo cuenta una historia con tonos suaves y detalles dorados.
+      </p>
+
+      <button>Explorar colección</button>
+    </div>
+  </section>
+
+  <section class="catalog" id="catalog">
+    <div class="catalog-header">
+      <span>Colección Nara</span>
+      <h2>Arreglos románticos con toque de lujo</h2>
+      <p>Diseños exclusivos para mamás, novias y momentos que merecen una expresión sincera y delicada.</p>
+    </div>
+
+    <div class="catalog-grid">
+      <article class="card">
+        <img src="images/1.jpg" alt="Arreglo Bouquet Nara">
+        <div class="card-body">
+          <h3>Bouquet Nara</h3>
+          <p class="price">$1,550</p>
+          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Bouquet%20Nara" class="btn whatsapp">WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/2.jpg" alt="Arreglo Jardín de Rosé">
+        <div class="card-body">
+          <h3>Jardín de Rosé</h3>
+          <p class="price">$1,750</p>
+          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Jard%C3%ADn%20de%20Ros%C3%A9" class="btn whatsapp">WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/3.jpg" alt="Arreglo Rosa de Novia">
+        <div class="card-body">
+          <h3>Rosa de Novia</h3>
+          <p class="price">$1,980</p>
+          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Rosa%20de%20Novia" class="btn whatsapp">WhatsApp</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="festividades" id="festividades">
+    <div class="section-header">
+      <span>Momentos Nara</span>
+      <h2>Celebraciones con sensibilidad</h2>
+      <p>Arreglos pensados para mamás, novias y cualquier ocasión que merezca un detalle romántico y sofisticado.</p>
+    </div>
+
+    <div class="festivities-grid">
+      <article class="fest-card">
+        <img src="images/4.jpg" alt="Día de las Madres">
+        <div class="fest-card-body">
+          <h3>Para Mamá</h3>
+          <p>Composiciones delicadas con rosas y peonías que acarician el corazón.</p>
+        </div>
+      </article>
+
+      <article class="fest-card">
+        <img src="images/5.jpg" alt="San Valentín">
+        <div class="fest-card-body">
+          <h3>Para Novias</h3>
+          <p>Bouquets románticos en tonos suaves para un momento lleno de emoción.</p>
+        </div>
+      </article>
+
+      <article class="fest-card">
+        <img src="images/6.jpg" alt="Arreglos personalizados">
+        <div class="fest-card-body">
+          <h3>Personalizados</h3>
+          <p>Arreglos únicos creados para contar tu propia historia con flores.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-header">
+          <span>Contacto Nara</span>
+          <h2>Hola, estamos listos para crear algo especial</h2>
+          <p>Desde Tonalá, Jalisco, hacemos arreglos románticos y delicados que hablan de amor, nostalgia y cuidado. Escribe, llama o ven a conocernos.</p>
+        </div>
+
+        <div class="contact-cards">
+          <article class="contact-card">
+            <h3>Ubicación</h3>
+            <p>Tonalá, Jalisco — Avenida Magnolia 142</p>
+          </article>
+
+          <article class="contact-card">
+            <h3>Horario</h3>
+            <p>Lun - Vie: 9:00 AM - 6:00 PM<br>Sáb: 10:00 AM - 2:00 PM</p>
+          </article>
+
+          <article class="contact-card">
+            <h3>Redes sociales</h3>
+            <div class="social-links">
+              <a href="https://instagram.com/narafloreria" class="social-pill">Instagram</a>
+              <a href="#" class="social-pill">Facebook</a>
+              <a href="https://wa.me/523340187767" class="social-pill">WhatsApp</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-title">
+          <span>Formulario</span>
+          <h3>Envía tu pedido</h3>
+          <p>Déjanos tu nombre, mensaje y datos para responderte con rapidez.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Cuéntanos qué arreglo quieres"></textarea>
+        </div>
+
+        <button type="submit" class="contact-submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Nara Florería</h3>
+        <p>Arreglos románticos y personalizados con un estilo sencillo y lujoso. Cada detalle es un mensaje de cariño.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Enlaces</h4>
+        <a href="#catalog">Colección</a>
+        <a href="#festividades">Momentos</a>
+        <a href="#contact">Contacto</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>Tel: +52 33 4018 7767</p>
+        <p>Email: contacto@narafloreria.com</p>
+      </div>
+    </div>
+
+    <p class="footer-copy">© 2026 Nara Florería. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
