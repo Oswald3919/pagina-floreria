@@ -1,12 +1,27 @@
+/* ==========================================
+   SCRIPT COMPLETO PARA NARA FLORERÍA
+   ========================================== */
+
+// Variables globales
 const navbar = document.querySelector('.navbar');
 const navToggle = document.querySelector('.nav-toggle');
 const heroButton = document.querySelector('.hero-content button');
-const scrollElements = document.querySelectorAll('.hero-content, .catalog-header, .card, .section-header, .fest-card, .contact-card, .contact-form, .footer-brand, .footer-links');
 
+// Elementos para animaciones de scroll
+const scrollElements = document.querySelectorAll(
+  '.hero-content, .catalog-header, .card, .section-header, .fest-card, ' + 
+  '.contact-card, .contact-form, .footer-brand, .footer-links, ' +
+  '.about-container, .about-content, .about-image, .values-container, .value-card, ' +
+  '.benefit-item, .portfolio-item, .package-card, .testimonial-card, ' + 
+  '.blog-card, .faq-item, .newsletter-container'
+);
+
+// Configuración del observer
 const observerOptions = {
   threshold: 0.18,
 };
 
+// Observer para efectos de entrada por scroll
 const scrollObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -16,11 +31,13 @@ const scrollObserver = new IntersectionObserver((entries, observer) => {
   });
 }, observerOptions);
 
+// Inicialización de las animaciones
 scrollElements.forEach(el => {
   el.classList.add('animate');
   scrollObserver.observe(el);
 });
 
+// Función para actualizar el estado de la barra de navegación
 const updateNavbarState = () => {
   if (window.scrollY > 45) {
     navbar.classList.add('scrolled');
@@ -29,9 +46,11 @@ const updateNavbarState = () => {
   }
 };
 
+// Event listener para cambios al hacer scroll
 window.addEventListener('scroll', updateNavbarState);
 updateNavbarState();
 
+// Menú móvil
 navToggle?.addEventListener('click', () => {
   navbar.classList.toggle('open');
 });
@@ -61,6 +80,7 @@ function smoothScrollTo(element, duration = 1200) {
   requestAnimationFrame(animation);
 }
 
+// Navegación suave entre secciones
 document.querySelectorAll('.navbar nav a').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault(); // Prevenir el comportamiento predeterminado
@@ -73,6 +93,7 @@ document.querySelectorAll('.navbar nav a').forEach(link => {
   });
 });
 
+// Botón de explorar colección
 heroButton?.addEventListener('click', () => {
   const catalogElement = document.querySelector('.catalog');
   if (catalogElement) {
@@ -80,6 +101,7 @@ heroButton?.addEventListener('click', () => {
   }
 });
 
+// Formulario de contacto
 const contactForm = document.querySelector('.contact-form');
 contactForm?.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -99,66 +121,166 @@ contactForm?.addEventListener('submit', (e) => {
   window.open(whatsappUrl, '_blank');
 });
 
-// Fondo dinámico removido - ahora fondos sólidos
+// Efecto de transparencia del hero en scroll
 document.addEventListener('DOMContentLoaded', () => {
   const heroContent = document.querySelector('.hero-content');
 
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
+  if (heroContent) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const maxScroll = 300;
+      let opacity = 1 - (scrollY / maxScroll);
 
-    const maxScroll = 300;
-    let opacity = 1 - (scrollY / maxScroll);
+      if (opacity < 0) opacity = 0;
+      if (opacity > 1) opacity = 1;
 
-    if (opacity < 0) opacity = 0;
-    if (opacity > 1) opacity = 1;
+      heroContent.style.opacity = opacity;
+      heroContent.style.transform = `translateY(${scrollY * -0.2}px)`;
+    });
+  }
 
-    heroContent.style.opacity = opacity;
+  // Filtros para el catálogo de productos
+  initProductFilters();
+  
+  // Filtros para el portfolio
+  initPortfolioFilters();
+  
+  // Inicializamos las preguntas frecuentes
+  initFAQ();
+  
+  // Manejamos el formulario de newsletter
+  initNewsletterForm();
+});
 
-    heroContent.style.transform = `translateY(${scrollY * -0.2}px)`;
+// Filtros para el catálogo de productos
+function initProductFilters() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const products = document.querySelectorAll('.card');
+  
+  // Verificamos que existan los elementos
+  if (!filterButtons.length || !products.length) return;
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Removemos la clase active de todos los botones
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Añadimos la clase active al botón clickeado
+      button.classList.add('active');
+      
+      // Obtenemos la categoría seleccionada
+      const filterValue = button.dataset.filter;
+      
+      // Filtramos los productos
+      products.forEach(product => {
+        if (filterValue === 'all' || product.dataset.category.includes(filterValue)) {
+          product.style.display = 'flex';
+          setTimeout(() => {
+            product.style.opacity = '1';
+            product.style.transform = 'translateY(0)';
+          }, 100);
+        } else {
+          product.style.opacity = '0';
+          product.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            product.style.display = 'none';
+          }, 400);
+        }
+      });
+    });
   });
-  /* ---------- Filtros de Portfolio ---------- */
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioCards = document.querySelectorAll('.portfolio-card');
+}
 
-filterButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Cambiar estilo activo
-    document.querySelector('.filter-btn.active').classList.remove('active');
-    btn.classList.add('active');
+// Filtros para la sección de portfolio
+function initPortfolioFilters() {
+  const portfolioFilterButtons = document.querySelectorAll('.portfolio-filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  
+  // Verificamos que existan los elementos
+  if (!portfolioFilterButtons.length || !portfolioItems.length) return;
+  
+  portfolioFilterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Removemos la clase active de todos los botones
+      portfolioFilterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Añadimos la clase active al botón clickeado
+      button.classList.add('active');
+      
+      // Obtenemos la categoría seleccionada
+      const filterValue = button.dataset.filter;
+      
+      // Filtramos los items del portfolio
+      portfolioItems.forEach(item => {
+        if (filterValue === 'all' || item.dataset.category === filterValue) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+          }, 100);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 400);
+        }
+      });
+    });
+  });
+}
 
-    const filter = btn.dataset.filter;
-    portfolioCards.forEach(card => {
-      const cat = card.dataset.category;
-      if (filter === 'all' || cat === filter) {
-        card.style.display = 'block';
-        card.classList.add('animate');
-      } else {
-        card.style.display = 'none';
+// Acordeón para preguntas frecuentes
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  // Verificamos que existan los elementos
+  if (!faqItems.length) return;
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // Comprobamos si el elemento está activo
+      const isActive = item.classList.contains('active');
+      
+      // Cerramos todas las preguntas
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+      });
+      
+      // Si no estaba activo, lo activamos
+      if (!isActive) {
+        item.classList.add('active');
       }
     });
   });
-});
+}
 
-/* ---------- FAQ Accordion ---------- */
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-  const question = item.querySelector('.question');
-  question.addEventListener('click', () => {
-    item.classList.toggle('open');
+// Formulario de newsletter
+function initNewsletterForm() {
+  const newsletterForm = document.querySelector('.newsletter-form');
+  
+  // Verificamos que exista el formulario
+  if (!newsletterForm) return;
+  
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Obtenemos el email del input
+    const emailInput = newsletterForm.querySelector('input[type="email"]');
+    const email = emailInput ? emailInput.value.trim() : '';
+    
+    // Validamos que tengamos un email
+    if (!email) {
+      alert('Por favor, ingresa tu correo electrónico.');
+      return;
+    }
+    
+    // Mostramos un mensaje de agradecimiento
+    alert('¡Gracias por suscribirte a nuestro newsletter! Pronto recibirás novedades de Nara Florería.');
+    
+    // Limpiamos el formulario
+    newsletterForm.reset();
   });
-});
-
-/* ---------- Newsletter (solo UI) ---------- */
-document.getElementById('newsletter-form')?.addEventListener('submit', e => {
-  e.preventDefault();
-  // Simulación rápida de éxito (puedes conectar a tu backend más tarde)
-  alert('¡Gracias por suscribirte! Pronto recibirás nuestras novedades.');
-  e.target.reset();
-});
-
-/* ---------- Hover overlay en tarjetas de producto (ya está en CSS, solo activamos), 
-    pero para que el overlay exista añadimos el HTML en la sección de productos: 
-    <div class="overlay">Ver detalle</div>
-   (Recuerda haber añadido ese div dentro de .card en el HTML) */
-});
+}
