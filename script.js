@@ -1,5 +1,5 @@
 /* ==========================================
-   SCRIPT COMPLETO PARA NARA FLORERÍA
+   SCRIPT FINAL PARA NARA FLORERÍA
    ========================================== */
 
 // Variables globales
@@ -7,13 +7,13 @@ const navbar = document.querySelector('.navbar');
 const navToggle = document.querySelector('.nav-toggle');
 const heroButton = document.querySelector('.hero-content button');
 
-// Elementos para animaciones de scroll
+// Elementos para animaciones de scroll (incluyendo la nueva sección de valores)
 const scrollElements = document.querySelectorAll(
   '.hero-content, .catalog-header, .card, .section-header, .fest-card, ' + 
   '.contact-card, .contact-form, .footer-brand, .footer-links, ' +
   '.about-container, .about-content, .about-image, .values-container, .value-card, ' +
   '.benefit-item, .portfolio-item, .package-card, .testimonial-card, ' + 
-  '.blog-card, .faq-item, .newsletter-container'
+  '.blog-card, .faq-item, .subscription-container'
 );
 
 // Configuración del observer
@@ -148,8 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inicializamos las preguntas frecuentes
   initFAQ();
   
-  // Manejamos el formulario de newsletter
-  initNewsletterForm();
+  // Manejamos el formulario de suscripción por WhatsApp
+  initSubscriptionForm();
 });
 
 // Filtros para el catálogo de productos
@@ -257,30 +257,35 @@ function initFAQ() {
   });
 }
 
-// Formulario de newsletter
-function initNewsletterForm() {
-  const newsletterForm = document.querySelector('.newsletter-form');
+// Formulario de suscripción por WhatsApp
+function initSubscriptionForm() {
+  const subscriptionForm = document.querySelector('.subscription-form');
   
   // Verificamos que exista el formulario
-  if (!newsletterForm) return;
+  if (!subscriptionForm) return;
   
-  newsletterForm.addEventListener('submit', (e) => {
+  subscriptionForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Obtenemos el email del input
-    const emailInput = newsletterForm.querySelector('input[type="email"]');
-    const email = emailInput ? emailInput.value.trim() : '';
+    // Obtenemos el número de teléfono del input
+    const phoneInput = subscriptionForm.querySelector('input[type="tel"]');
+    const phone = phoneInput ? phoneInput.value.trim() : '';
     
-    // Validamos que tengamos un email
-    if (!email) {
-      alert('Por favor, ingresa tu correo electrónico.');
+    // Validamos que tengamos un número
+    if (!phone) {
+      alert('Por favor, ingresa tu número de WhatsApp.');
       return;
     }
     
-    // Mostramos un mensaje de agradecimiento
-    alert('¡Gracias por suscribirte a nuestro newsletter! Pronto recibirás novedades de Nara Florería.');
+    // Mensaje para WhatsApp
+    const whatsappMessage = `Hola, quiero suscribirme a las novedades de Nara Florería. Mi número es: ${phone}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/523340187767?text=${encodedMessage}`;
+    
+    // Abrimos WhatsApp
+    window.open(whatsappUrl, '_blank');
     
     // Limpiamos el formulario
-    newsletterForm.reset();
+    subscriptionForm.reset();
   });
 }

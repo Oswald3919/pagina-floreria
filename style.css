@@ -1,5 +1,5 @@
 /* ==========================================
-   ESTILOS COMPLETOS PARA NARA FLORERÍA
+   ESTILOS FINALES PARA NARA FLORERÍA
    ========================================== */
 
 /* Variables y Configuración Global */
@@ -55,9 +55,8 @@ p, label, input, textarea, a, button{
   left:0;
   padding:20px 50px;
   display:flex;
-  justify-content:flex-start;
+  justify-content:space-between; /* Cambiado a space-between */
   align-items:center;
-  gap:12px;
   z-index:1000;
   background:rgba(255,250,246,0.58);
   border:1px solid rgba(255,255,255,0.7);
@@ -80,7 +79,6 @@ p, label, input, textarea, a, button{
 }
 
 .navbar nav{
-  margin-left:auto;
   display:flex;
   align-items:center;
   justify-content:flex-end;
@@ -119,12 +117,12 @@ p, label, input, textarea, a, button{
 nav a{
   color:var(--text);
   text-decoration:none;
-  margin-left:30px;
   font-weight:600;
   letter-spacing:0.01em;
   transition:transform 0.25s ease, opacity 0.3s ease, color 0.3s ease;
   transform:translateY(0);
   white-space:nowrap;
+  margin: 0 15px; /* Ajustado para distribución uniforme */
 }
 
 nav a:hover{
@@ -348,6 +346,12 @@ nav a:hover{
   transform: scale(1.05);
 }
 
+/* ===== SECCIÓN VALORES ===== */
+.values-section {
+  padding: 80px 50px;
+  background: var(--soft-beige);
+}
+
 .values-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -401,7 +405,7 @@ nav a:hover{
 /* ===== SECCIÓN BENEFICIOS ===== */
 .benefits {
   padding: 60px 50px;
-  background: var(--soft-beige);
+  background: var(--bg);
 }
 
 .benefits-container {
@@ -1162,13 +1166,13 @@ nav a:hover{
   line-height: 1.7;
 }
 
-/* ===== SECCIÓN NEWSLETTER ===== */
-.newsletter {
+/* ===== SECCIÓN SUSCRIPCIÓN (REEMPLAZO DEL NEWSLETTER) ===== */
+.subscription {
   padding: 90px 50px;
   background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(255,255,255,0.3) 100%);
 }
 
-.newsletter-container {
+.subscription-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1178,12 +1182,12 @@ nav a:hover{
   gap: 40px;
 }
 
-.newsletter-content {
+.subscription-content {
   flex: 1;
   min-width: 300px;
 }
 
-.newsletter-label {
+.subscription-label {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.24em;
@@ -1192,32 +1196,32 @@ nav a:hover{
   margin-bottom: 14px;
 }
 
-.newsletter-content h2 {
+.subscription-content h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 38px;
   margin-bottom: 16px;
   color: var(--text);
 }
 
-.newsletter-content p {
+.subscription-content p {
   color: var(--muted);
   font-size: 16px;
   line-height: 1.7;
   max-width: 500px;
 }
 
-.newsletter-form {
+.subscription-form {
   flex: 1;
   min-width: 300px;
 }
 
-.newsletter-input-group {
+.subscription-input-group {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.newsletter-input-group input {
+.subscription-input-group input {
   flex: 1;
   min-width: 200px;
   padding: 16px 20px;
@@ -1228,12 +1232,12 @@ nav a:hover{
   font-size: 15px;
 }
 
-.newsletter-input-group input:focus {
+.subscription-input-group input:focus {
   outline: none;
   border-color: var(--accent);
 }
 
-.newsletter-input-group button {
+.subscription-input-group button {
   padding: 16px 30px;
   border: none;
   border-radius: 999px;
@@ -1244,12 +1248,12 @@ nav a:hover{
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.newsletter-input-group button:hover {
+.subscription-input-group button:hover {
   transform: translateY(-2px);
   filter: brightness(1.05);
 }
 
-.newsletter-privacy {
+.subscription-privacy {
   font-size: 13px;
   color: var(--muted);
   margin-top: 14px;
@@ -1503,8 +1507,8 @@ nav a:hover{
 
 /* ===== MEDIA QUERIES ===== */
 @media(max-width:1024px){
-  .about-container,
   .values-container,
+  .about-container,
   .benefits-container,
   .packages-container,
   .testimonials-container,
@@ -1557,12 +1561,12 @@ nav a:hover{
   .navbar nav{
     order:3;
     flex-direction:column;
-    align-items:center;
+    align-items:flex-start; /* Cambiado para alinear a la izquierda */
     width:100%;
-    max-height:1px;
+    max-height:0; /* Cambiado de 1px a 0 */
     opacity:0;
     margin-top:1px;
-    padding:0 10px;
+    padding:0 20px; /* Aumentado el padding lateral */
     background:rgba(255,248,244,0.95);
     border-radius:24px;
     border:1px solid rgba(206,179,141,0.24);
@@ -1571,17 +1575,18 @@ nav a:hover{
   }
 
   .navbar.open nav{
-    max-height:400px;
+    max-height:500px; /* Aumentado para dar más espacio */
+    padding: 20px; /* Añadir padding cuando está abierto */
     opacity:1;
   }
 
   .navbar nav a{
     display:block;
     width:100%;
-    padding:22px 0;
+    padding:15px 0; /* Reducido el padding vertical */
     margin:0;
     border-top:1px solid rgba(206,179,141,0.12);
-    text-align:center;
+    text-align:left; /* Alineado a la izquierda */
     letter-spacing:0.05em;
   }
 
@@ -1615,20 +1620,20 @@ nav a:hover{
     height:260px;
   }
 
-  .newsletter-container {
+  .subscription-container {
     flex-direction: column;
     text-align: center;
     gap: 30px;
   }
 
-  .newsletter-content p {
+  .subscription-content p {
     margin: 0 auto;
   }
 }
 
 @media(max-width:768px){
-  .about-container, 
   .values-container,
+  .about-container, 
   .benefits-container,
   .packages-container,
   .testimonials-container,
@@ -1657,7 +1662,7 @@ nav a:hover{
 @media(max-width:480px){
   .filter-container,
   .portfolio-filter,
-  .newsletter-input-group {
+  .subscription-input-group {
     flex-direction: column;
     align-items: stretch;
   }
