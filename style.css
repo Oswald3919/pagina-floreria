@@ -26,7 +26,7 @@ html{
 
 body{
   font-family:'Inter', Arial, sans-serif;
-  background:radial-gradient(circle at top, rgba(249,251,231,0.95), rgba(247,243,239,0.95) 42%), linear-gradient(180deg, #F9FBE7 0%, #f7f3ef 100%);
+  background:#F9FBE7;
   color:var(--text);
 }
 
@@ -47,7 +47,7 @@ p, label, input, textarea, a, button{
   display:flex;
   justify-content:flex-start;
   align-items:center;
-  gap:22px;
+  gap:12px;
   z-index:1000;
   background:rgba(255,250,246,0.58);
   border:1px solid rgba(255,255,255,0.7);
@@ -89,7 +89,7 @@ p, label, input, textarea, a, button{
 .logo{
   color:var(--text);
   font-size:24px;
-  font-weight:700;
+  font-weight:300;
   letter-spacing:0.04em;
 }
 
@@ -116,16 +116,15 @@ nav a:hover{
 
 .nav-toggle{
   display:none;
-  width:52px;
-  height:52px;
+  width:40px;
+  height:40px;
   border:none;
-  background:rgba(247, 247, 247, 0.75);
+  background:rgba(247, 247, 247, 0.95);
   border:1px solid rgba(206,179,141,0.35);
   border-radius:18px;
   backdrop-filter:blur(16px);
   cursor:pointer;
-  align-items:center;
-  justify-content:center;
+  position:relative;
   transition:transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
 
@@ -136,12 +135,17 @@ nav a:hover{
 
 .nav-toggle span{
   display:block;
-  width:22px;
+  width:24px;
   height:2px;
-  margin:4px 0;
-  border-radius:99px;
-  background:oklab(62.419000000000004% 0.22355 0.12506);
-  transition:transform 0.25s ease, opacity 0.25s ease;
+  margin:3px 0;
+  border-radius:999px;
+  background:var(--text);
+  transition:transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar.open .nav-toggle{
+  transform:scale(1.05);
+  background:rgba(255,248,244,0.95);
 }
 
 .navbar.open .nav-toggle span:nth-child(1){
@@ -172,7 +176,7 @@ nav a:hover{
 
 .hero{
   min-height:100vh;
-  background:linear-gradient(180deg, rgba(249,251,231,0.96), rgba(251,241,236,0.82)), url('images/7.jpg') center/cover no-repeat;
+  background:#F9FBE7 url('images/fondo.jpg') center/cover no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -223,11 +227,32 @@ nav a:hover{
   color:var(--muted);
 }
 
+.hero-content button{
+  font-family:'Cormorant Garamond', serif;
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:0.02em;
+  padding:16px 32px;
+  border:none;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  cursor:pointer;
+  transition:transform var(--transition), box-shadow var(--transition), filter var(--transition);
+  box-shadow:0 12px 30px rgba(182,138,97,0.3);
+}
+
+.hero-content button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 40px rgba(182,138,97,0.4);
+  filter:brightness(1.05);
+}
+
 .overlay{
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.35);
+  background:rgba(0,0,0,0.12);
 }
 
 .animate{
@@ -243,7 +268,7 @@ nav a:hover{
 
 .catalog{
   padding:120px 50px 80px;
-  background:var(--bg);
+  background:#F9FBE7;
 }
 
 .catalog-header{
@@ -360,7 +385,7 @@ nav a:hover{
 
 .festividades{
   padding:100px 50px 90px;
-  background:transparent;
+  background:#F9FBE7;
 }
 
 .section-header{
@@ -444,7 +469,7 @@ nav a:hover{
 
 .contact{
   padding:100px 50px 90px;
-  background:linear-gradient(180deg, rgba(249,251,231,0.92), rgba(247,243,239,0.9));
+  background:#F9FBE7;
 }
 
 .contact-grid{
@@ -610,7 +635,7 @@ nav a:hover{
 
 .site-footer{
   padding:60px 50px 40px;
-  background:#1c1612;
+  background:linear-gradient(135deg, #1c1612 0%, #2a1f1a 50%, #1c1612 100%);
   color:rgba(255,255,255,0.86);
 }
 
@@ -676,9 +701,9 @@ nav a:hover{
   }
 }
 
-@media(max-width:768px){
+@media(max-width:1080px){
   .navbar{
-    padding:16px 22px;
+    padding:10px 22px;
     justify-content:space-between;
     flex-wrap:wrap;
   }
@@ -687,16 +712,19 @@ nav a:hover{
     display:flex;
     order:2;
     margin-left:auto;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
   }
 
   .navbar nav{
     order:3;
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
     width:100%;
-    max-height:0;
+    max-height:1px;
     opacity:0;
-    margin-top:14px;
+    margin-top:1px;
     padding:0 10px;
     background:rgba(255,248,244,0.95);
     border-radius:24px;
@@ -706,16 +734,18 @@ nav a:hover{
   }
 
   .navbar.open nav{
-    max-height:320px;
+    max-height:400px;
     opacity:1;
   }
 
   .navbar nav a{
     display:block;
     width:100%;
-    padding:14px 0;
+    padding:22px 0;
     margin:0;
     border-top:1px solid rgba(206,179,141,0.12);
+    text-align:center;
+    letter-spacing:0.05em;
   }
 
   .navbar nav a:first-child{

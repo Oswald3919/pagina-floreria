@@ -36,14 +36,48 @@ navToggle?.addEventListener('click', () => {
   navbar.classList.toggle('open');
 });
 
+// Función para scroll suave personalizado
+function smoothScrollTo(element, duration = 1200) {
+  const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
 document.querySelectorAll('.navbar nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    navbar.classList.remove('open');
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevenir el comportamiento predeterminado
+    const targetId = link.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      smoothScrollTo(targetElement, 1200); // 1.2 segundos de duración
+    }
+    navbar.classList.remove('open'); // Cerrar menú móvil
   });
 });
 
 heroButton?.addEventListener('click', () => {
-  document.querySelector('.catalog')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const catalogElement = document.querySelector('.catalog');
+  if (catalogElement) {
+    smoothScrollTo(catalogElement, 1200);
+  }
 });
 
 const contactForm = document.querySelector('.contact-form');
@@ -64,3 +98,6 @@ contactForm?.addEventListener('submit', (e) => {
 
   window.open(whatsappUrl, '_blank');
 });
+
+// Fondo dinámico removido - ahora fondos sólidos
+
