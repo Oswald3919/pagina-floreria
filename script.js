@@ -84,15 +84,15 @@ const contactForm = document.querySelector('.contact-form');
 contactForm?.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
+  const numero = document.getElementById('numero').value.trim();
   const message = document.getElementById('message').value.trim();
 
-  if (!name || !email || !message) {
+  if (!name || !numero || !message) {
     alert('Por favor, completa todos los campos.');
     return;
   }
 
-  const whatsappMessage = `Hola, soy ${name}. Mi email es ${email}. Mi pedido: ${message}`;
+  const whatsappMessage = `Hola, soy ${name}. Mi número es ${numero}. Mi pedido: ${message}`;
   const encodedMessage = encodeURIComponent(whatsappMessage);
   const whatsappUrl = `https://wa.me/523340187767?text=${encodedMessage}`;
 
