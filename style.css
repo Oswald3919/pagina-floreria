@@ -1,4 +1,6 @@
+
 :root{
+
   --bg:#F9FBE7;
   --surface:#fff9f5;
   --text:#4b3d34;
@@ -103,11 +105,6 @@ nav a{
   transform:translateY(0);
 }
 
-.logo,
-.navbar .logo{
-  color:#f7f7f7;
-}
-
 nav a:hover{
   color:var(--accent);
   opacity:0.95;
@@ -119,10 +116,10 @@ nav a:hover{
   width:40px;
   height:40px;
   border:none;
-  background:rgba(247, 247, 247, 0.95);
-  border:1px solid rgba(206,179,141,0.35);
-  border-radius:18px;
-  backdrop-filter:blur(16px);
+  background:rgba(255, 255, 255, 0.6);
+  border:1px solid rgba(206,179,141,0.2);
+  border-radius:12px;
+  backdrop-filter:blur(8px);
   cursor:pointer;
   position:relative;
   transition:transform var(--transition), box-shadow var(--transition), background var(--transition);
@@ -713,6 +710,373 @@ nav a:hover{
   }
 }
 
+/* ==== NUEVAS SECCIONES ==== */
+
+/* ---------- Sobre Nosotras ---------- */
+.about {
+  padding: 100px 50px;
+  background: var(--bg-soft);
+}
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-img img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.about-text {
+  flex: 1;
+}
+.about-intro,
+.about-philosophy {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* ---------- Portfolio (Galería) ---------- */
+.portfolio {
+  padding: 120px 50px;
+  background: #fff;
+}
+.portfolio-filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.filter-btn {
+  background: var(--accent-soft);
+  border: none;
+  padding: 8px 18px;
+  margin: 4px;
+  border-radius: 999px;
+  color: var(--text);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+}
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.portfolio-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: opacity var(--transition);
+}
+.portfolio-card:hover img {
+  transform: scale(1.08);
+}
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+/* ---------- Blog / Notas ---------- */
+.blog {
+  padding: 100px 50px;
+  background: var(--bg-soft);
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.blog-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  transition: transform var(--transition);
+}
+.blog-card:hover {
+  transform: translateY(-6px);
+}
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.blog-content {
+  padding: 20px;
+}
+.blog-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.read-more {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+.read-more:hover {
+  opacity: 0.8;
+}
+
+/* ---------- Testimonios ---------- */
+.testimonials {
+  padding: 100px 50px;
+  background: #fff;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.testimonial-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 45px rgba(0,0,0,0.12);
+}
+.testimonial-text {
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.testimonial-author {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ---------- Beneficios con iconos ---------- */
+.benefits {
+  padding: 80px 50px;
+  background: var(--bg-soft);
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+.benefit-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+}
+.benefit-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+/* ---------- Newsletter ---------- */
+.newsletter {
+  padding: 100px 50px;
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+}
+.newsletter-text {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.newsletter-form input {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 999px;
+  min-width: 260px;
+  font-size: 1rem;
+}
+.newsletter-form button {
+  background: var(--text);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 24px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.newsletter-form button:hover {
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+/* ---------- Paquetes / Precios ---------- */
+.packages {
+  padding: 100px 50px;
+  background: #fff;
+}
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.package-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  transition: transform var(--transition);
+}
+.package-card:hover {
+  transform: translateY(-8px);
+}
+.package-card h3 {
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.package-card .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 12px 0;
+}
+.package-card .features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  color: var(--muted);
+}
+.package-card .features li {
+  margin-bottom: 8px;
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  padding: 100px 50px;
+  background: var(--bg-soft);
+}
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  margin-bottom: 20px;
+}
+.question {
+  background: var(--accent-soft);
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text);
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+.question:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  padding: 0 20px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.faq-item.open .answer {
+  max-height: 200px; /* lo suficiente para el contenido */
+  padding: 20px;
+}
+
+/* ---------- Botón flotante WhatsApp ---------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* ---------- Hover avanzado en productos (cards) ---------- */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,250,246,0.85);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: opacity var(--transition);
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media(max-width:1024px){
+  .about-wrapper{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 @media(max-width:1080px){
   .navbar{
     padding:10px 22px;
@@ -790,5 +1154,3 @@ nav a:hover{
     height:260px;
   }
 }
-
-

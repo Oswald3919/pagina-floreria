@@ -13,8 +13,10 @@
 <body>
 
   <header class="navbar">
-    <div class="logo">
-      <img src="images/logo.png" alt="Nara Florería">
+        <div class="logo">
+      <a href="#hero" class="logo-link">
+        <img src="images/logo.png" alt="Nara Florería">
+      </a>
     </div>
 
     <nav>
@@ -234,6 +236,249 @@
     <p class="footer-copy">© 2026 Nara. Todos los derechos reservados.</p>
   </footer>
 
+
+
+
+
+
+
+
+
+<!-- ==================== SECCIÓN “SOBRE NOSOTRAS” ==================== -->
+<section class="about" id="about">
+  <div class="about-wrapper">
+    <div class="about-img">
+      <img src="images/about.jpg" alt="Equipo Nara Florería">
+    </div>
+    <div class="about-text">
+      <h2 class="section-title">Sobre Nosotras</h2>
+      <p class="about-intro">
+        Nara Florería nació del amor por las flores naturales y el deseo de crear
+        arreglos que cuenten historias. Cada detalle se elabora con un
+        enfoque minimalista, respetando la frescura de cada pétalo y ofreciendo
+        un toque personalizado para cada ocasión.
+      </p>
+      <p class="about-philosophy">
+        <strong>Flores naturales</strong> • <strong>Diseño minimalista</strong> •
+        <strong>Arreglos personalizados</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GALERÍA / PORTFOLIO ==================== -->
+<section class="portfolio" id="portfolio">
+  <h2 class="section-title">Portfolio</h2>
+
+  <!-- Filtros -->
+  <div class="portfolio-filters">
+    <button class="filter-btn active" data-filter="all">Todas</button>
+    <button class="filter-btn" data-filter="bodas">Bodas</button>
+    <button class="filter-btn" data-filter="regalos">Regalos</button>
+    <button class="filter-btn" data-filter="eventos">Eventos</button>
+    <button class="filter-btn" data-filter="personalizados">Personalizados</button>
+  </div>
+
+  <div class="portfolio-grid">
+    <!-- Cada tarjeta lleva data-category -->
+    <article class="portfolio-card" data-category="bodas">
+      <img src="images/portfolio1.jpg" alt="Boda 1">
+      <div class="overlay"><span>Ver detalle</span></div>
+    </article>
+
+    <article class="portfolio-card" data-category="regalos">
+      <img src="images/portfolio2.jpg" alt="Regalo 1">
+      <div class="overlay"><span>Ver detalle</span></div>
+    </article>
+
+    <article class="portfolio-card" data-category="eventos">
+      <img src="images/portfolio3.jpg" alt="Evento 1">
+      <div class="overlay"><span>Ver detalle</span></div>
+    </article>
+
+    <article class="portfolio-card" data-category="personalizados">
+      <img src="images/portfolio4.jpg" alt="Personalizado 1">
+      <div class="overlay"><span>Ver detalle</span></div>
+    </article>
+
+    <!-- Repite la estructura para el resto de tus fotos -->
+  </div>
+</section>
+
+<!-- ==================== BLOG / NOTAS ==================== -->
+<section class="blog" id="blog">
+  <h2 class="section-title">Notas</h2>
+  <div class="blog-grid">
+
+    <article class="blog-card">
+      <img src="images/blog1.jpg" alt="Cómo cuidar flores">
+      <div class="blog-content">
+        <h3>Cómo cuidar flores</h3>
+        <p>Consejos para que tus arreglos duren más tiempo y sigan luciendo frescos.</p>
+        <a href="#" class="read-more">Leer más →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <img src="images/blog2.jpg" alt="Significado de las flores">
+      <div class="blog-content">
+        <h3>Significado de las flores</h3>
+        <p>Descubre el lenguaje secreto detrás de cada flor.</p>
+        <a href="#" class="read-more">Leer más →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <img src="images/blog3.jpg" alt="Tendencias en floristería">
+      <div class="blog-content">
+        <h3>Tendencias en floristería 2026</h3>
+        <p>Lo que está marcando el estilo de la temporada.</p>
+        <a href="#" class="read-more">Leer más →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIOS ==================== -->
+<section class="testimonials" id="testimonials">
+  <h2 class="section-title">Testimonios</h2>
+  <div class="testimonials-grid">
+    <article class="testimonial-card">
+      <p class="testimonial-text">“Los arreglos de Nara son verdaderamente únicos, cada detalle habla de amor.”</p>
+      <p class="testimonial-author">‑ María G.</p>
+    </article>
+
+    <article class="testimonial-card">
+      <p class="testimonial-text">“Recibí mi regalo justo a tiempo y con una presentación preciosa.”</p>
+      <p class="testimonial-author">‑ Carlos R.</p>
+    </article>
+
+    <article class="testimonial-card">
+      <p class="testimonial-text">“Nuestro día de boda fue mágico gracias a los bouquets de Nara.”</p>
+      <p class="testimonial-author">‑ Ana & Luis</p>
+    </article>
+  </div>
+</section>
+
+<!-- ==================== BENEFICIOS CON ICONOS ==================== -->
+<section class="benefits" id="benefits">
+  <h2 class="section-title">Beneficios</h2>
+  <div class="benefits-grid">
+
+    <article class="benefit-card">
+      <div class="benefit-icon">🌿</div>
+      <h4>Flores naturales y frescas</h4>
+    </article>
+
+    <article class="benefit-card">
+      <div class="benefit-icon">📦</div>
+      <h4>Empaque elegante</h4>
+    </article>
+
+    <article class="benefit-card">
+      <div class="benefit-icon">⚡</div>
+      <h4>Entrega rápida</h4>
+    </article>
+
+    <article class="benefit-card">
+      <div class="benefit-icon">🎨</div>
+      <h4>Diseños personalizados</h4>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==================== NEWSLETTER ==================== -->
+<section class="newsletter" id="newsletter">
+  <h2 class="section-title">Suscríbete</h2>
+  <p class="newsletter-text">Recibe novedades y promociones especiales de Nara Florería</p>
+  <form class="newsletter-form" id="newsletter-form">
+    <input type="email" placeholder="Tu correo electrónico" required>
+    <button type="submit">Suscribirme</button>
+  </form>
+</section>
+
+<!-- ==================== PAQUETES / PRECIOS ==================== -->
+<section class="packages" id="packages">
+  <h2 class="section-title">Paquetes</h2>
+  <div class="packages-grid">
+
+    <article class="package-card">
+      <h3>Romántico</h3>
+      <p class="price">$1,500</p>
+      <ul class="features">
+        <li>Ramo clásico</li>
+        <li>Empaque sencillo</li>
+        <li>Entrega en 48 h</li>
+      </ul>
+      <a href="https://wa.me/523340187767?text=Quiero%20el%20paquete%20Romántico" class="btn whatsapp">¡Quiero este!</a>
+    </article>
+
+    <article class="package-card">
+      <h3>Elegante</h3>
+      <p class="price">$2,300</p>
+      <ul class="features">
+        <li>Ramo premium + complementos</li>
+        <li>Empaque de lujo</li>
+        <li>Entrega en 24 h</li>
+      </ul>
+      <a href="https://wa.me/523340187767?text=Quiero%20el%20paquete%20Elegante" class="btn whatsapp">¡Quiero este!</a>
+    </article>
+
+    <article class="package-card">
+      <h3>Premium</h3>
+      <p class="price">$3,200</p>
+      <ul class="features">
+        <li>Diseño a medida</li>
+        <li>Empaque de terciopelo</li>
+        <li>Entrega exprés + detalle extra</li>
+      </ul>
+      <a href="https://wa.me/523340187767?text=Quiero%20el%20paquete%20Premium" class="btn whatsapp">¡Quiero este!</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="faq" id="faq">
+  <h2 class="section-title">Preguntas frecuentes</h2>
+  <div class="faq-grid">
+
+    <article class="faq-item">
+      <button class="question">¿Cuál es la vida promedio de un ramo?</button>
+      <div class="answer">Nuestros arreglos se mantienen frescos entre 5 y 7 días si se siguen las recomendaciones de hidratación.</div>
+    </article>
+
+    <article class="faq-item">
+      <button class="question">¿Realizan entregas fuera de Tonalá?</button>
+      <div class="answer">Sí, hacemos envíos a todo Jalisco y zona metropolitana mediante servicio de paquetería.</div>
+    </article>
+
+    <article class="faq-item">
+      <button class="question">¿Puedo solicitar un diseño totalmente a medida?</button>
+      <div class="answer">Por supuesto, trabajamos contigo para crear el arreglo que mejor cuente tu historia.</div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==================== BOTÓN FLOTA – WHATSAPP ==================== -->
+<a href="https://wa.me/523340187767" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#fff" d="M19.11 13.3c-.55 0-1 .45-1 1v2.1c0 .55.45 1 1 1s1-.45 1-1v-2.1c0-.55-.45-1-1-1zM12.89 13.3c-.55 0-1 .45-1 1v2.1c0 .55.45 1 1 1s1-.45 1-1v-2.1c0-.55-.45-1-1-1zM16 2C8.28 2 2 8.28 2 16c0 2.82.86 5.45 2.33 7.64L2 30l6.45-2.34C10.56 29.09 13.18 30 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2z"/>
+  </svg>
+</a>
+
+
+
+
+
+
+
+
+
+  
   <script src="script.js"></script>
   
 

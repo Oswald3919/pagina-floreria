@@ -38,8 +38,8 @@ navToggle?.addEventListener('click', () => {
 
 // Función para scroll suave personalizado
 function smoothScrollTo(element, duration = 1200) {
-  const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
-  const startPosition = window.pageYOffset;
+  const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+  const startPosition = window.scrollY;
   const distance = targetPosition - startPosition;
   let startTime = null;
 
@@ -116,4 +116,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     heroContent.style.transform = `translateY(${scrollY * -0.2}px)`;
   });
+  /* ---------- Filtros de Portfolio ---------- */
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Cambiar estilo activo
+    document.querySelector('.filter-btn.active').classList.remove('active');
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    portfolioCards.forEach(card => {
+      const cat = card.dataset.category;
+      if (filter === 'all' || cat === filter) {
+        card.style.display = 'block';
+        card.classList.add('animate');
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+/* ---------- FAQ Accordion ---------- */
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.question');
+  question.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+
+/* ---------- Newsletter (solo UI) ---------- */
+document.getElementById('newsletter-form')?.addEventListener('submit', e => {
+  e.preventDefault();
+  // Simulación rápida de éxito (puedes conectar a tu backend más tarde)
+  alert('¡Gracias por suscribirte! Pronto recibirás nuestras novedades.');
+  e.target.reset();
+});
+
+/* ---------- Hover overlay en tarjetas de producto (ya está en CSS, solo activamos), 
+    pero para que el overlay exista añadimos el HTML en la sección de productos: 
+    <div class="overlay">Ver detalle</div>
+   (Recuerda haber añadido ese div dentro de .card en el HTML) */
 });
