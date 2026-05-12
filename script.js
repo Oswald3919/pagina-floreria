@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Catalog Filtering
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.card');
+  const catalogCards = document.querySelectorAll('.catalog .card');
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -95,10 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const filter = btn.getAttribute('data-filter');
 
-      cards.forEach(card => {
-        const categories = card.getAttribute('data-category');
+      catalogCards.forEach(card => {
+        const categories = card.getAttribute('data-category') || '';
         if (filter === 'all' || categories.includes(filter)) {
           card.style.display = 'block';
+          // Small timeout to allow display:block to take effect before opacity transition
           setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
@@ -111,6 +112,22 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 300);
         }
       });
+    });
+  });
+
+  // 7.1 Catalog Detail Toggle
+  const cardDetailTriggers = document.querySelectorAll('.card-btn-detail');
+  cardDetailTriggers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.card');
+      card.classList.toggle('details-open');
+      
+      // Update button text
+      if (card.classList.contains('details-open')) {
+        btn.textContent = 'Ocultar detalles';
+      } else {
+        btn.textContent = 'Ver detalles';
+      }
     });
   });
 
