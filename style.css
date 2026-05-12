@@ -227,21 +227,21 @@ p { font-size: 18px; color: var(--muted); }
 
 /* ===== BENEFICIOS (REFINADOS) ===== */
 .benefits {
-  padding: var(--section-padding);
+  padding: 80px 24px; /* More compact section */
   background: var(--bg);
 }
 
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 30px;
   max-width: var(--container-width);
   margin: 0 auto;
 }
 
 .benefit-item {
   text-align: center;
-  padding: 48px 32px;
+  padding: 32px 24px; /* Reduced internal padding */
   background: var(--surface);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -250,21 +250,21 @@ p { font-size: 18px; color: var(--muted); }
 }
 
 .benefit-item:hover {
-  transform: translateY(-12px);
+  transform: translateY(-8px); /* Subtle hover */
   box-shadow: var(--shadow-lg);
 }
 
 .benefit-icon {
-  width: 72px;
-  height: 72px;
+  width: 64px; /* Slightly smaller icon */
+  height: 64px;
   background: #fbfbfd;
-  border-radius: 20px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 32px;
+  margin: 0 auto 20px; /* Reduced margin */
   color: var(--accent);
-  font-size: 28px;
+  font-size: 24px;
   box-shadow: var(--shadow-sm);
   transition: all 0.4s var(--transition);
 }
@@ -272,11 +272,11 @@ p { font-size: 18px; color: var(--muted); }
 .benefit-item:hover .benefit-icon {
   background: var(--accent);
   color: white;
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.05) rotate(5deg);
 }
 
-.benefit-item h3 { font-size: 24px; margin-bottom: 16px; font-weight: 500; }
-.benefit-item p { font-size: 16px; line-height: 1.5; }
+.benefit-item h3 { font-size: 20px; margin-bottom: 12px; font-weight: 500; }
+.benefit-item p { font-size: 15px; line-height: 1.4; }
 
 /* ===== CATÁLOGO ===== */
 .catalog { padding: var(--section-padding); }
@@ -456,9 +456,9 @@ p { font-size: 18px; color: var(--muted); }
 }
 
 /* ===== EXTRAS (TESTIMONIALS, BLOG, FAQ) ===== */
-.testimonials { padding: var(--section-padding); background: #fbfbfd; }
-.testimonials-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.testimonial-card { background: var(--white); padding: 48px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.testimonials { padding: 80px 24px; background: #fbfbfd; }
+.testimonials-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.testimonial-card { background: var(--white); padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
 
 .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .blog-card { border-radius: var(--radius-lg); overflow: hidden; transition: transform 0.5s var(--transition); }
@@ -666,19 +666,20 @@ p { font-size: 18px; color: var(--muted); }
 
   .about-container, .catalog-grid, .portfolio-grid, .packages-container, .benefits-grid, .contact-grid { 
     grid-template-columns: 1fr; 
-    gap: 40px; 
+    gap: 32px; 
   }
 
-  .benefit-item { padding: 40px 24px; }
-  .benefit-icon { width: 72px; height: 72px; font-size: 28px; }
+  .benefits, .testimonials { padding: 50px 24px; }
+  .benefit-item { padding: 24px 20px; }
+  .benefit-icon { width: 56px; height: 56px; font-size: 20px; margin-bottom: 16px; }
 
   .package-card { padding: 48px 32px; }
   .price-amount { font-size: 48px; }
   .package-card.featured { transform: scale(1); }
 
   /* Compact Extras */
-  .testimonials-container { grid-template-columns: 1fr; gap: 40px; }
-  .testimonial-card { padding: 48px 32px; }
+  .testimonials-container { grid-template-columns: 1fr; gap: 24px; }
+  .testimonial-card { padding: 24px 20px; }
   
   .faq-container { gap: 0; }
   .faq-item { padding: 20px 0; }
