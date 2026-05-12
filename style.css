@@ -150,9 +150,8 @@ p { font-size: 18px; color: var(--muted); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('images/ejemplo.jpg') center/cover no-repeat;
-  transform: scale(1.15);
-  filter: brightness(0.85);
+  background: url('images/fondo.png') center/cover no-repeat;
+  transform: scale(1);
 }
 
 @keyframes kenBurns {
@@ -615,6 +614,11 @@ p { font-size: 18px; color: var(--muted); }
   .navbar { padding: 16px 24px; }
   .navbar.scrolled { padding: 12px 24px; }
   .nav-toggle { display: block; }
+  
+  /* FONDO HERO MÓVIL (Cambia el nombre del archivo aquí) */
+  .hero-bg {
+    background-image: url('images/fondomovil.png');
+  }
   
   .navbar nav {
     position: fixed;
