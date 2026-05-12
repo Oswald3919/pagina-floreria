@@ -223,7 +223,7 @@ p { font-size: 18px; color: var(--muted); }
 
 .navbar nav a:hover { color: var(--accent); opacity: 1; transform: translateY(-1px); }
 
-/* Flower Menu Icon */
+/* Lotus Menu Icon */
 .nav-toggle {
   display: none;
   background: var(--surface-soft);
@@ -240,46 +240,38 @@ p { font-size: 18px; color: var(--muted); }
 
 .nav-toggle span {
   display: block;
-  width: 13px;
-  height: 19px;
-  background: linear-gradient(155deg, var(--gold) 0%, var(--accent) 56%, #8f6845 100%);
+  width: 12px;
+  height: 21px;
+  background: var(--accent);
   position: absolute;
   left: 50%;
   top: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 80% 80% 52% 52% / 92% 92% 48% 48%;
+  border: none;
+  border-radius: 80% 80% 58% 58% / 96% 96% 42% 42%;
   transform-origin: 50% 92%;
-  box-shadow: inset 0 -5px 8px rgba(0, 0, 0, 0.12), 0 2px 7px var(--accent-soft);
+  z-index: 2;
+  box-shadow: none;
   transition: transform 0.55s var(--transition), background-color 0.4s var(--transition), opacity 0.4s var(--transition);
 }
 
 .nav-toggle span::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 4px;
-  width: 5px;
-  height: 9px;
-  border-left: 1px solid rgba(255, 255, 255, 0.48);
-  border-radius: 50%;
-  opacity: 0.75;
-  transform: translateX(-50%) rotate(18deg);
+  display: none;
 }
 
 .nav-toggle::before {
   content: "";
   position: absolute;
   left: 50%;
-  top: 56%;
-  width: 12px;
-  height: 12px;
-  background:
-    radial-gradient(circle at 50% 50%, var(--gold) 0 22%, transparent 24%),
-    conic-gradient(from 24deg, var(--accent), var(--gold) 18%, var(--accent) 34%, var(--gold) 52%, var(--accent) 72%, var(--gold) 86%, var(--accent));
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0.85);
-  z-index: 2;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18), 0 0 10px var(--accent-soft);
+  top: 57%;
+  width: 11px;
+  height: 18px;
+  background: var(--accent);
+  border: none;
+  border-radius: 80% 80% 58% 58% / 96% 96% 42% 42%;
+  transform: translate(-66%, -48%) rotate(-36deg) translateY(1px) scale(0.54, 0.86);
+  transform-origin: 50% 92%;
+  z-index: 1;
+  box-shadow: none;
   transition: transform 0.55s var(--transition), background-color 0.4s var(--transition);
 }
 
@@ -287,34 +279,52 @@ p { font-size: 18px; color: var(--muted); }
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 5px;
-  width: 20px;
-  height: 13px;
-  background:
-    linear-gradient(var(--accent), var(--accent)) center top / 2px 13px no-repeat,
-    radial-gradient(ellipse at 30% 78%, var(--accent) 0 43%, transparent 46%) left 4px / 11px 8px no-repeat,
-    radial-gradient(ellipse at 70% 78%, var(--accent) 0 43%, transparent 46%) right 4px / 11px 8px no-repeat;
-  opacity: 0.75;
-  transform: translateX(-50%);
+  top: 57%;
+  width: 11px;
+  height: 18px;
+  background: var(--accent);
+  border: none;
+  border-radius: 80% 80% 58% 58% / 96% 96% 42% 42%;
+  opacity: 1;
+  transform: translate(-34%, -48%) rotate(36deg) translateY(1px) scale(0.54, 0.86);
+  transform-origin: 50% 92%;
+  z-index: 1;
+  box-shadow: none;
   transition: transform 0.55s var(--transition), opacity 0.4s var(--transition), background-color 0.4s var(--transition);
 }
 
-.nav-toggle span:nth-child(1) { transform: translate(-57%, -52%) rotate(-28deg) translateY(-1px) scale(0.78, 0.92); }
-.nav-toggle span:nth-child(2) { transform: translate(-50%, -58%) rotate(0deg) translateY(-3px) scale(0.92, 1); }
-.nav-toggle span:nth-child(3) { transform: translate(-43%, -52%) rotate(28deg) translateY(-1px) scale(0.78, 0.92); }
+.nav-toggle span:nth-child(1) { transform: translate(-62%, -54%) rotate(-18deg) translateY(-3px) scale(0.72, 0.96); }
+.nav-toggle span:nth-child(2) { z-index: 3; transform: translate(-50%, -61%) rotate(0deg) translateY(-5px) scale(0.88, 1.06); }
+.nav-toggle span:nth-child(3) { transform: translate(-38%, -54%) rotate(18deg) translateY(-3px) scale(0.72, 0.96); }
+
+.nav-toggle span:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 18px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 0 0 12px 12px;
+  clip-path: polygon(50% 0, 100% 58%, 82% 100%, 18% 100%, 0 58%);
+  transform: translateX(-50%) scale(0.7, 0.7);
+  transform-origin: 50% 100%;
+  transition: transform 0.55s var(--transition), width 0.55s var(--transition), background-color 0.4s var(--transition);
+}
 
 .nav-toggle:hover { transform: translateY(-2px); }
 
 .navbar.menu-open .nav-toggle {
   background: var(--white);
-  transform: rotate(8deg);
+  transform: rotate(0deg);
 }
 
-.navbar.menu-open .nav-toggle::before { transform: translate(-50%, -50%) scale(1); }
-.navbar.menu-open .nav-toggle::after { opacity: 0.62; transform: translateX(-50%) translateY(2px) scaleY(0.82); }
-.navbar.menu-open .nav-toggle span:nth-child(1) { transform: translate(-61%, -58%) rotate(-64deg) translateY(-8px); }
-.navbar.menu-open .nav-toggle span:nth-child(2) { transform: translate(-50%, -68%) rotate(0deg) translateY(-9px) scale(1.02); }
-.navbar.menu-open .nav-toggle span:nth-child(3) { transform: translate(-39%, -58%) rotate(64deg) translateY(-8px); }
+.navbar.menu-open .nav-toggle::before { transform: translate(-56%, -61%) rotate(-30deg) translateY(-8px) scale(1.04, 1.02); }
+.navbar.menu-open .nav-toggle::after { transform: translate(-44%, -61%) rotate(30deg) translateY(-8px) scale(1.04, 1.02); }
+.navbar.menu-open .nav-toggle span:nth-child(1) { transform: translate(-64%, -53%) rotate(-58deg) translateY(-7px) scale(1.02, 1); }
+.navbar.menu-open .nav-toggle span:nth-child(2) { transform: translate(-50%, -68%) rotate(0deg) translateY(-9px) scale(0.96, 1.08); }
+.navbar.menu-open .nav-toggle span:nth-child(3) { transform: translate(-36%, -53%) rotate(58deg) translateY(-7px) scale(1.02, 1); }
+.navbar.menu-open .nav-toggle span:nth-child(2)::after { width: 27px; transform: translateX(-50%) translateY(3px) scale(1, 1); }
 
 /* ===== HERO CON KEN BURNS ===== */
 .hero {
