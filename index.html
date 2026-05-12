@@ -40,14 +40,13 @@
     </nav>
 
     <button class="nav-toggle" aria-label="Abrir menú">
-      <span></span>
-      <span></span>
-      <span></span>
+      <i class="fa-solid fa-bars-staggered"></i>
     </button>
   </header>
 
   <section class="hero" id="hero">
-    <div class="overlay"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
     <div class="hero-content">
       <span class="hero-label">Nara Florería</span>
@@ -62,655 +61,428 @@
   </section>
 
   <!-- NUEVA SECCIÓN: SOBRE NOSOTRAS -->
-  <section class="about" id="about">
-    <div class="about-container">
-      <div class="about-content">
-        <div class="section-header">
-          <span>Nuestra Historia</span>
-          <h2>La historia detrás de Nara Florería</h2>
-          <p>Fundada con amor y pasión por la naturaleza, creando cada arreglo como una pieza de arte que cuenta historias.</p>
+  <section class="about reveal" id="about">
+    <div class="container">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="images/about.jpg" alt="El equipo de Nara Florería" />
         </div>
-        
-        <div class="about-text">
-          <p>Nara nació de un sueño compartido: crear arreglos que vayan más allá de lo estético y transmitan emociones genuinas. Cada flor es seleccionada cuidadosamente, cada detalle pensado para crear algo único.</p>
+        <div class="about-content">
+          <div class="section-header" style="text-align: left; margin: 0;">
+            <span>Nuestra Historia</span>
+            <h2>La historia detrás de Nara Florería</h2>
+          </div>
           
-          <p>Nos especializamos en diseños minimalistas y románticos, donde menos es más. Nuestro equipo de floristas apasionadas crea cada pieza con dedicación, asegurando que cada arreglo cuente una historia diferente.</p>
-          
-          <div class="about-signature">
-            <p>Con cariño,</p>
-            <span class="signature">El equipo de Nara</span>
+          <div class="about-text">
+            <p>Nara nació de un sueño compartido: crear arreglos que vayan más allá de lo estético y transmitan emociones genuinas. Cada flor es seleccionada cuidadosamente, cada detalle pensado para crear algo único.</p>
+            
+            <p>Nos especializamos en diseños minimalistas y románticos, donde menos es más. Nuestro equipo de floristas apasionadas crea cada pieza con dedicación, asegurando que cada arreglo cuente una historia diferente.</p>
+            
+            <div class="about-signature">
+              <p>Con cariño,</p>
+              <span class="signature">El equipo de Nara</span>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="about-image">
-        <img src="images/about.jpg" alt="El equipo de Nara Florería" />
+    </div>
+  </section>
+
+  <!-- SECCIÓN: BENEFICIOS -->
+  <section class="benefits reveal">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h3>Flores naturales</h3>
+          <p>100% frescas y seleccionadas con cuidado</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <h3>Empaque premium</h3>
+          <p>Presentación elegante y personalizada</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3>Entrega rápida</h3>
+          <p>Servicio puntual en Tonalá y alrededores</p>
+        </div>
+        
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3>Diseño personalizado</h3>
+          <p>Arreglos únicos adaptados a tus deseos</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN: BENEFICIOS (ANTES DEL CATÁLOGO) -->
-  <section class="benefits">
-    <div class="benefits-container">
-      <div class="benefit-item">
-        <div class="benefit-icon">
-          <i class="fa-solid fa-leaf"></i>
-        </div>
-        <h3>Flores naturales</h3>
-        <p>100% frescas y seleccionadas con cuidado</p>
+  <!-- FILTROS DE CATÁLOGO Y CATÁLOGO -->
+  <section class="catalog reveal" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span>Colección Nara</span>
+        <h2>Flores frescas de primavera</h2>
+        <p>Arreglos inspirados en la temporada actual, con colores vibrantes y aromas frescos.</p>
       </div>
-      
-      <div class="benefit-item">
-        <div class="benefit-icon">
-          <i class="fa-solid fa-gift"></i>
-        </div>
-        <h3>Empaque premium</h3>
-        <p>Presentación elegante y personalizada</p>
-      </div>
-      
-      <div class="benefit-item">
-        <div class="benefit-icon">
-          <i class="fa-solid fa-truck-fast"></i>
-        </div>
-        <h3>Entrega rápida</h3>
-        <p>Servicio puntual en Tonalá y alrededores</p>
-      </div>
-      
-      <div class="benefit-item">
-        <div class="benefit-icon">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-        </div>
-        <h3>Diseño personalizado</h3>
-        <p>Arreglos únicos adaptados a tus deseos</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- FILTROS DE CATÁLOGO Y CATÁLOGO ORIGINAL MEJORADO -->
-  <section class="catalog" id="catalog">
-    <div class="catalog-header">
-      <span>Colección Nara</span>
-      <h2>Flores frescas de primavera</h2>
-      <p>Arreglos inspirados en la temporada actual, con colores vibrantes y aromas frescos para celebrar la renovación.</p>
-    </div>
-
-    <div class="filter-container">
-      <div class="filter-label">Filtrar por:</div>
-      <div class="filter-buttons">
+      <div class="filter-container">
         <button class="filter-btn active" data-filter="all">Todos</button>
         <button class="filter-btn" data-filter="romantico">Románticos</button>
         <button class="filter-btn" data-filter="premium">Premium</button>
         <button class="filter-btn" data-filter="evento">Eventos</button>
       </div>
-    </div>
 
-    <div class="catalog-grid">
-      <article class="card" data-category="romantico premium">
-        <div class="card-image-container">
-          <img src="images/7.jpg" alt="Arreglo Bouquet Primavera">
-          <div class="card-overlay">
-            <span>Ver detalles</span>
+      <div class="catalog-grid">
+        <article class="card reveal" data-category="romantico premium">
+          <div class="card-image-container">
+            <img src="images/7.jpg" alt="Arreglo Bouquet Primavera">
           </div>
-        </div>
-        <div class="card-body">
-          <h3>Bouquet Primavera</h3>
-          <p class="price">$1,650</p>
-          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Bouquet%20Primavera" class="btn whatsapp">Contacto</a>
-        </div>
-      </article>
-
-      <article class="card" data-category="premium evento">
-        <div class="card-image-container">
-          <img src="images/8.jpg" alt="Arreglo Jardín Estival">
-          <div class="card-overlay">
-            <span>Ver detalles</span>
+          <div class="card-body">
+            <h3>Bouquet Primavera</h3>
+            <p class="price">$1,650</p>
+            <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Bouquet%20Primavera" class="btn whatsapp">Contacto</a>
           </div>
-        </div>
-        <div class="card-body">
-          <h3>Jardín Estival</h3>
-          <p class="price">$1,850</p>
-          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Jard%C3%ADn%20Estival" class="btn whatsapp">Contacto</a>
-        </div>
-      </article>
+        </article>
 
-      <article class="card" data-category="romantico">
-        <div class="card-image-container">
-          <img src="images/9.jpg" alt="Arreglo Flores del Campo">
-          <div class="card-overlay">
-            <span>Ver detalles</span>
+        <article class="card reveal" data-category="premium evento">
+          <div class="card-image-container">
+            <img src="images/8.jpg" alt="Arreglo Jardín Estival">
           </div>
-        </div>
-        <div class="card-body">
-          <h3>Flores del Campo</h3>
-          <p class="price">$1,720</p>
-          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Flores%20del%20Campo" class="btn whatsapp">Contacto</a>
-        </div>
-      </article>
-    </div>
-
-    <div class="catalog-header">
-      <span>Colección General</span>
-      <h2>Arreglos clásicos y elegantes</h2>
-      <p>Diseños atemporales para ocasiones especiales, con un toque de sofisticación.</p>
-    </div>
-
-    <div class="catalog-grid">
-      <article class="card" data-category="romantico">
-        <div class="card-image-container">
-          <img src="images/1.jpg" alt="Arreglo Bouquet Nara">
-          <div class="card-overlay">
-            <span>Ver detalles</span>
+          <div class="card-body">
+            <h3>Jardín Estival</h3>
+            <p class="price">$1,850</p>
+            <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Jard%C3%ADn%20Estival" class="btn whatsapp">Contacto</a>
           </div>
-        </div>
-        <div class="card-body">
-          <h3>Bouquet Nara</h3>
-          <p class="price">$1,550</p>
-          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Bouquet%20Nara" class="btn whatsapp">Contacto</a>
-        </div>
-      </article>
+        </article>
 
-      <article class="card" data-category="premium evento">
-        <div class="card-image-container">
-          <img src="images/2.jpg" alt="Arreglo Jardín de Rosé">
-          <div class="card-overlay">
-            <span>Ver detalles</span>
+        <article class="card reveal" data-category="romantico">
+          <div class="card-image-container">
+            <img src="images/9.jpg" alt="Arreglo Flores del Campo">
           </div>
-        </div>
-        <div class="card-body">
-          <h3>Jardín de Rosé</h3>
-          <p class="price">$1,750</p>
-          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Jard%C3%ADn%20de%20Ros%C3%A9" class="btn whatsapp">Contacto</a>
-        </div>
-      </article>
-
-      <article class="card" data-category="premium romantico">
-        <div class="card-image-container">
-          <img src="images/3.jpg" alt="Arreglo Rosa de Novia">
-          <div class="card-overlay">
-            <span>Ver detalles</span>
+          <div class="card-body">
+            <h3>Flores del Campo</h3>
+            <p class="price">$1,720</p>
+            <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Flores%20del%20Campo" class="btn whatsapp">Contacto</a>
           </div>
-        </div>
-        <div class="card-body">
-          <h3>Rosa de Novia</h3>
-          <p class="price">$1,980</p>
-          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20arreglo%20Rosa%20de%20Novia" class="btn whatsapp">Contacto</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- VALORES MOVIDOS AQUÍ: DESPUÉS DEL CATÁLOGO -->
-  <section class="values-section">
-    <div class="values-container">
-      <div class="value-card">
-        <div class="value-icon">
-          <i class="fa-solid fa-heart"></i>
-        </div>
-        <h3>Pasión</h3>
-        <p>Amamos lo que hacemos y eso se refleja en cada detalle de nuestros arreglos.</p>
-      </div>
-      
-      <div class="value-card">
-        <div class="value-icon">
-          <i class="fa-solid fa-seedling"></i>
-        </div>
-        <h3>Naturaleza</h3>
-        <p>Utilizamos flores frescas y naturales, respetando su belleza original.</p>
-      </div>
-      
-      <div class="value-card">
-        <div class="value-icon">
-          <i class="fa-solid fa-palette"></i>
-        </div>
-        <h3>Estética</h3>
-        <p>Cada arreglo es una obra de arte con equilibrio, color y delicadeza.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- NUEVA SECCIÓN: PORTFOLIO -->
-  <section class="portfolio" id="portfolio">
-    <div class="section-header">
-      <span>Nuestro Trabajo</span>
-      <h2>Creaciones para momentos únicos</h2>
-      <p>Una muestra de los arreglos florales y decoraciones que hemos creado para nuestros clientes.</p>
-    </div>
-
-    <div class="portfolio-filter">
-      <button class="portfolio-filter-btn active" data-filter="all">Todos</button>
-      <button class="portfolio-filter-btn" data-filter="bodas">Bodas</button>
-      <button class="portfolio-filter-btn" data-filter="eventos">Eventos</button>
-      <button class="portfolio-filter-btn" data-filter="regalos">Regalos</button>
-    </div>
-
-    <div class="portfolio-grid">
-      <div class="portfolio-item" data-category="bodas">
-        <img src="images/portfolio-1.jpg" alt="Arreglo para boda">
-        <div class="portfolio-overlay">
-          <h3>Decoración para boda</h3>
-          <p>Arreglo central y bouquet de novia</p>
-        </div>
+  <section class="portfolio reveal" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span>Nuestro Trabajo</span>
+        <h2>Creaciones para momentos únicos</h2>
+        <p>Una muestra de los arreglos florales y decoraciones que hemos creado.</p>
       </div>
 
-      <div class="portfolio-item" data-category="eventos">
-        <img src="images/portfolio-2.jpg" alt="Arreglo para evento corporativo">
-        <div class="portfolio-overlay">
-          <h3>Evento corporativo</h3>
-          <p>Mesa de recepción con arreglos minimalistas</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item" data-category="regalos">
-        <img src="images/portfolio-3.jpg" alt="Arreglo para regalo">
-        <div class="portfolio-overlay">
-          <h3>Regalo personalizado</h3>
-          <p>Rosas y peonías en caja de lujo</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item" data-category="bodas">
-        <img src="images/portfolio-4.jpg" alt="Decoración para ceremonia">
-        <div class="portfolio-overlay">
-          <h3>Ceremonia íntima</h3>
-          <p>Arcos y decoración para boda al aire libre</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item" data-category="regalos">
-        <img src="images/portfolio-5.jpg" alt="Arreglo especial">
-        <div class="portfolio-overlay">
-          <h3>Caja especial</h3>
-          <p>Diseño exclusivo para aniversario</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item" data-category="eventos">
-        <img src="images/portfolio-6.jpg" alt="Decoración de mesa">
-        <div class="portfolio-overlay">
-          <h3>Centros de mesa</h3>
-          <p>Arreglos para cena de gala</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NUEVA SECCIÓN: PAQUETES DE PRECIOS -->
-  <section class="packages">
-    <div class="section-header">
-      <span>Paquetes Nara</span>
-      <h2>Encuentra el arreglo perfecto para tu ocasión</h2>
-      <p>Nuestros diseños son creados con las flores más frescas y de la más alta calidad, presentados en empaques elegantes.</p>
-    </div>
-
-    <div class="packages-container">
-      <div class="package-card">
-        <div class="package-badge">Popular</div>
-        <h3>Paquete Romántico</h3>
-        <div class="package-price">
-          <span class="price-amount">$1,500</span>
-        </div>
-        <ul class="package-features">
-          <li><i class="fa-solid fa-check"></i> Flores de temporada</li>
-          <li><i class="fa-solid fa-check"></i> Tarjeta personalizada</li>
-          <li><i class="fa-solid fa-check"></i> Envoltura elegante</li>
-          <li><i class="fa-solid fa-check"></i> Rosas premium</li>
-          <li><i class="fa-solid fa-check"></i> Entrega en zona centro</li>
-        </ul>
-        <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20Paquete%20Romántico" class="package-btn">Seleccionar</a>
-      </div>
-
-      <div class="package-card featured">
-        <div class="package-badge">Premium</div>
-        <h3>Paquete Elegante</h3>
-        <div class="package-price">
-          <span class="price-amount">$2,200</span>
-        </div>
-        <ul class="package-features">
-          <li><i class="fa-solid fa-check"></i> Flores premium seleccionadas</li>
-          <li><i class="fa-solid fa-check"></i> Tarjeta caligráfica</li>
-          <li><i class="fa-solid fa-check"></i> Caja de lujo</li>
-          <li><i class="fa-solid fa-check"></i> Follaje especial</li>
-          <li><i class="fa-solid fa-check"></i> Entrega express</li>
-        </ul>
-        <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20Paquete%20Elegante" class="package-btn">Seleccionar</a>
-      </div>
-
-      <div class="package-card">
-        <div class="package-badge">Exclusivo</div>
-        <h3>Paquete Premium</h3>
-        <div class="package-price">
-          <span class="price-amount">$3,000</span>
-        </div>
-        <ul class="package-features">
-          <li><i class="fa-solid fa-check"></i> Flores exclusivas importadas</li>
-          <li><i class="fa-solid fa-check"></i> Caja de regalo signature</li>
-          <li><i class="fa-solid fa-check"></i> Complementos gourmet</li>
-          <li><i class="fa-solid fa-check"></i> Diseño personalizado</li>
-          <li><i class="fa-solid fa-check"></i> Entrega a domicilio sin cargo</li>
-        </ul>
-        <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20Paquete%20Premium" class="package-btn">Seleccionar</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN FESTIVIDADES EXISTENTE -->
-  <section class="festividades" id="festividades">
-    <div class="section-header">
-      <span>Momentos Nara</span>
-      <h2>Celebraciones con sensibilidad</h2>
-      <p>Arreglos pensados para mamás, novias y cualquier ocasión que merezca un detalle romántico y sofisticado.</p>
-    </div>
-
-    <div class="festivities-grid">
-      <article class="fest-card">
-        <img src="images/4.jpg" alt="Día de las Madres">
-        <div class="fest-card-body">
-          <h3>Para Mamá</h3>
-          <p>Composiciones delicadas con rosas y peonías que acarician el corazón.</p>
-        </div>
-      </article>
-
-      <article class="fest-card">
-        <img src="images/5.jpg" alt="San Valentín">
-        <div class="fest-card-body">
-          <h3>Para Novias</h3>
-          <p>Bouquets románticos en tonos suaves para un momento lleno de emoción.</p>
-        </div>
-      </article>
-
-      <article class="fest-card">
-        <img src="images/6.jpg" alt="Arreglos personalizados">
-        <div class="fest-card-body">
-          <h3>Personalizados</h3>
-          <p>Arreglos únicos creados para contar tu propia historia con flores.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- NUEVA SECCIÓN: TESTIMONIOS (CON TEXTOS MÁS REALISTAS) -->
-  <section class="testimonials">
-    <div class="section-header">
-      <span>Testimonios</span>
-      <h2>Lo que dicen nuestros clientes</h2>
-      <p>Nos enorgullece crear experiencias memorables y dejar una impresión duradera con nuestros arreglos.</p>
-    </div>
-
-    <div class="testimonials-container">
-      <div class="testimonial-card">
-        <div class="testimonial-quote">
-          <i class="fa-solid fa-quote-left"></i>
-        </div>
-        <p>Llegué a Nara buscando algo diferente para el cumpleaños de mi esposa. Quedé impresionado con la calidad de las flores y lo mucho que duró el arreglo. Su atención al detalle es inigualable.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">
-            <img src="images/testimonial-1.jpg" alt="Manuel Ortiz">
-          </div>
-          <div class="testimonial-info">
-            <h4>Manuel Ortiz</h4>
-            <span>Cliente desde 2022</span>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="images/portfolio-1.jpg" alt="Arreglo para boda">
+          <div class="portfolio-overlay">
+            <h3>Decoración para boda</h3>
+            <p>Arreglo central y bouquet</p>
           </div>
         </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote">
-          <i class="fa-solid fa-quote-left"></i>
-        </div>
-        <p>Mi arreglo de aniversario llegó puntualmente y era exactamente lo que había pedido, pero aún más hermoso. Las flores estaban frescas y el servicio fue excelente. Definitivamente volveré.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">
-            <img src="images/testimonial-2.jpg" alt="Laura Vázquez">
-          </div>
-          <div class="testimonial-info">
-            <h4>Laura Vázquez</h4>
-            <span>Arreglo para aniversario</span>
+        <div class="portfolio-item">
+          <img src="images/portfolio-2.jpg" alt="Evento corporativo">
+          <div class="portfolio-overlay">
+            <h3>Evento corporativo</h3>
+            <p>Mesa de recepción</p>
           </div>
         </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote">
-          <i class="fa-solid fa-quote-left"></i>
-        </div>
-        <p>Trabajamos con Nara para nuestra boda íntima y superaron nuestras expectativas. La decoración floral transformó completamente el espacio y las flores permanecieron impecables toda la celebración.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">
-            <img src="images/testimonial-3.jpg" alt="Carla y Daniel">
-          </div>
-          <div class="testimonial-info">
-            <h4>Carla y Daniel</h4>
-            <span>Boda en mayo 2023</span>
+        <div class="portfolio-item">
+          <img src="images/portfolio-3.jpg" alt="Regalo premium">
+          <div class="portfolio-overlay">
+            <h3>Regalo personalizado</h3>
+            <p>Rosas y peonías</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- NUEVA SECCIÓN: BLOG -->
-  <section class="blog" id="blog">
-    <div class="section-header">
-      <span>Notas Florales</span>
-      <h2>Blog de Nara</h2>
-      <p>Descubre nuestros consejos, tendencias y todo lo que debes saber sobre el mundo de las flores.</p>
-    </div>
-
-    <div class="blog-container">
-      <article class="blog-card">
-        <div class="blog-image">
-          <img src="images/blog-1.jpg" alt="Cuidados para tus flores">
-        </div>
-        <div class="blog-content">
-          <div class="blog-date">
-            <span>Mayo 15, 2023</span>
-          </div>
-          <h3>Cómo hacer que tus flores duren más tiempo</h3>
-          <p>Descubre los secretos para mantener tus arreglos frescos y radiantes por semanas. Técnicas sencillas que marcan la diferencia.</p>
-          <a href="#" class="blog-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-image">
-          <img src="images/blog-2.jpg" alt="Significado de las flores">
-        </div>
-        <div class="blog-content">
-          <div class="blog-date">
-            <span>Junio 3, 2023</span>
-          </div>
-          <h3>El lenguaje secreto de las flores</h3>
-          <p>Cada flor tiene un mensaje. Aprende a comunicar tus sentimientos a través de diferentes variedades y colores.</p>
-          <a href="#" class="blog-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-image">
-          <img src="images/blog-3.jpg" alt="Tendencias en arreglos florales">
-        </div>
-        <div class="blog-content">
-          <div class="blog-date">
-            <span>Julio 21, 2023</span>
-          </div>
-          <h3>Tendencias florales para 2023</h3>
-          <p>Colores, estilos y diseños que están dominando el mundo de la floristería este año. Descubre qué está de moda.</p>
-          <a href="#" class="blog-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- NUEVA SECCIÓN: FAQ -->
-  <section class="faq">
-    <div class="section-header">
-      <span>Preguntas Frecuentes</span>
-      <h2>Resolvemos tus dudas</h2>
-      <p>Respuestas a las preguntas más comunes sobre nuestros servicios, productos y proceso.</p>
-    </div>
-
-    <div class="faq-container">
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Realizan entregas a domicilio?</h3>
-          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-        </div>
-        <div class="faq-answer">
-          <p>Sí, realizamos entregas en toda la zona metropolitana de Guadalajara. Contamos con servicio express para pedidos urgentes y puedes programar el día y la hora exacta que deseas para tu entrega.</p>
-        </div>
+  <!-- TESTIMONIOS -->
+  <section class="testimonials reveal">
+    <div class="container">
+      <div class="section-header">
+        <span>Testimonios</span>
+        <h2>Lo que dicen nuestros clientes</h2>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Cuánto tiempo duran los arreglos?</h3>
-          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-        </div>
-        <div class="faq-answer">
-          <p>Nuestros arreglos están diseñados para durar entre 7 y 10 días en óptimas condiciones. Incluimos instrucciones de cuidado para maximizar su durabilidad. Las rosas preservadas pueden durar hasta un año con los cuidados adecuados.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Pueden personalizar los arreglos?</h3>
-          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-        </div>
-        <div class="faq-answer">
-          <p>Absolutamente. Trabajamos de forma personalizada según tus gustos, preferencias de colores, tipos de flor y presupuesto. Puedes enviarnos referencias o ideas y crearemos un diseño único para ti.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Realizan arreglos para eventos y bodas?</h3>
-          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-        </div>
-        <div class="faq-answer">
-          <p>Sí, ofrecemos servicios completos de decoración floral para bodas y eventos. Esto incluye desde centros de mesa, bouquets, arcos florales hasta la decoración completa de espacios. Agendamos citas de consulta para diseñar según tu evento.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          <h3>¿Cómo puedo pagar mi pedido?</h3>
-          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-        </div>
-        <div class="faq-answer">
-          <p>Aceptamos múltiples formas de pago: transferencias bancarias, depósitos, pago con tarjeta y efectivo. Para pedidos en línea solicitamos un anticipo del 50% para confirmar la reserva de las flores.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN DE SUSCRIPCIÓN POR WHATSAPP (REEMPLAZO DEL NEWSLETTER) -->
-  <section class="subscription">
-    <div class="subscription-container">
-      <div class="subscription-content">
-        <span class="subscription-label">Mantente conectado</span>
-        <h2>Recibe noticias y promociones</h2>
-        <p>Suscríbete para recibir novedades, inspiración floral y promociones exclusivas directamente en tu WhatsApp.</p>
-      </div>
-      
-      <form class="subscription-form">
-        <div class="subscription-input-group">
-          <input type="tel" placeholder="Tu número de WhatsApp" required>
-          <button type="submit">Suscribirme</button>
-        </div>
-        <p class="subscription-privacy">Respetamos tu privacidad. Puedes cancelar en cualquier momento.</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- SECCIÓN DE CONTACTO EXISTENTE -->
-  <section class="contact" id="contact">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="section-header">
-          <span>Contacto Nara</span>
-          <h2>Hola, estamos listos para crear algo especial</h2>
-          <p>Desde Tonalá, Jalisco, hacemos arreglos románticos y delicados que hablan de amor, nostalgia y cuidado. Escribe, llama o ven a conocernos.</p>
-        </div>
-
-        <div class="contact-cards">
-          <article class="contact-card">
-            <h3>Ubicación</h3>
-            <p><a href="https://www.google.com/maps/search/?api=1&query=Avenida+Magnolia+142,+Tonalá,+Jalisco" target="_blank">Tonalá, Jalisco — Avenida Magnolia 142</a></p>
-          </article>
-
-          <article class="contact-card">
-            <h3>Horario</h3>
-            <p>Lun - Vie: 9:00 AM - 6:00 PM<br>Sáb: 10:00 AM - 2:00 PM</p>
-          </article>
-
-          <article class="contact-card">
-            <h3>Redes sociales</h3>
-            <div class="social-links">
-              <a href="https://instagram.com/nara.floreria" class="social-pill">Instagram</a>
-              <a href="https://facebook.com/nara.floreria" class="social-pill">Facebook</a>
-              <a href="https://wa.me/523340187767" class="social-pill">WhatsApp</a>
+      <div class="testimonials-container">
+        <div class="testimonial-card">
+          <p>"Llegué a Nara buscando algo diferente. Quedé impresionado con la calidad de las flores y su atención al detalle."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-info">
+              <h4>Manuel Ortiz</h4>
+              <span>Cliente desde 2022</span>
             </div>
-          </article>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>"Mi arreglo de aniversario era exactamente lo que había pedido, pero aún más hermoso. Definitivamente volveré."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-info">
+              <h4>Laura Vázquez</h4>
+              <span>Arreglo para aniversario</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p>"Trabajamos con Nara para nuestra boda y superaron nuestras expectativas. Las flores permanecieron impecables."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-info">
+              <h4>Carla y Daniel</h4>
+              <span>Boda en mayo 2023</span>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <form class="contact-form">
-        <div class="form-title">
-          <span>Pedidos</span>
-          <h3>Envía tu pedido</h3>
-          <p>Déjanos tu nombre, mensaje y datos para responderte con rapidez.</p>
+  <!-- BLOG -->
+  <section class="blog reveal" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span>Notas Florales</span>
+        <h2>Blog de Nara</h2>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="images/blog-1.jpg" alt="Cuidados">
+          </div>
+          <div class="blog-content">
+            <h3>Cómo hacer que tus flores duren más</h3>
+            <a href="#" class="blog-link">Leer más</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="images/blog-2.jpg" alt="Significado">
+          </div>
+          <div class="blog-content">
+            <h3>El lenguaje secreto de las flores</h3>
+            <a href="#" class="blog-link">Leer más</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="images/blog-3.jpg" alt="Tendencias">
+          </div>
+          <div class="blog-content">
+            <h3>Tendencias florales para este año</h3>
+            <a href="#" class="blog-link">Leer más</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOMENTOS -->
+  <section class="festividades reveal" id="festividades">
+    <div class="container">
+      <div class="section-header">
+        <span>Momentos Nara</span>
+        <h2>Celebraciones con sensibilidad</h2>
+      </div>
+
+      <div class="catalog-grid">
+        <article class="card">
+          <div class="card-image-container">
+            <img src="images/4.jpg" alt="Día de las madres">
+          </div>
+          <div class="card-body">
+            <h3>Para Mamá</h3>
+            <p>Composiciones delicadas que acarician el corazón.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-image-container">
+            <img src="images/5.jpg" alt="Novias">
+          </div>
+          <div class="card-body">
+            <h3>Para Novias</h3>
+            <p>Bouquets románticos en tonos suaves.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-image-container">
+            <img src="images/6.jpg" alt="Personalizados">
+          </div>
+          <div class="card-body">
+            <h3>Personalizados</h3>
+            <p>Arreglos únicos para tu propia historia.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq reveal">
+    <div class="container">
+      <div class="section-header">
+        <span>FAQ</span>
+        <h2>Resolvemos tus dudas</h2>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>¿Realizan entregas a domicilio?</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Sí, realizamos entregas en toda la zona metropolitana de Guadalajara. Contamos con servicio express.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>¿Cuánto tiempo duran los arreglos?</h3>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Nuestros arreglos están diseñados para durar entre 7 y 10 días en óptimas condiciones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="packages reveal">
+    <div class="container">
+      <div class="section-header">
+        <span>Paquetes Nara</span>
+        <h2>Encuentra el arreglo perfecto</h2>
+        <p>Nuestros diseños son creados con las flores más frescas y de la más alta calidad.</p>
+      </div>
+
+      <div class="packages-container">
+        <div class="package-card reveal">
+          <h3>Paquete Romántico</h3>
+          <span class="price-amount">$1,500</span>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Flores de temporada</li>
+            <li><i class="fa-solid fa-check"></i> Tarjeta personalizada</li>
+            <li><i class="fa-solid fa-check"></i> Envoltura elegante</li>
+          </ul>
+          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20Paquete%20Romántico" class="package-btn">Seleccionar</a>
         </div>
 
-        <div class="form-group">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name" placeholder="Tu nombre" />
+        <div class="package-card featured reveal">
+          <h3>Paquete Elegante</h3>
+          <span class="price-amount">$2,200</span>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Flores premium seleccionadas</li>
+            <li><i class="fa-solid fa-check"></i> Tarjeta caligráfica</li>
+            <li><i class="fa-solid fa-check"></i> Caja de lujo</li>
+          </ul>
+          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20Paquete%20Elegante" class="package-btn">Seleccionar</a>
         </div>
 
-        <div class="form-group">
-          <label for="numero">Número de Contacto</label>
-          <input type="tel" id="numero" name="numero" placeholder="Tu número de teléfono" />
+        <div class="package-card reveal">
+          <h3>Paquete Premium</h3>
+          <span class="price-amount">$3,000</span>
+          <ul class="package-features">
+            <li><i class="fa-solid fa-check"></i> Flores exclusivas importadas</li>
+            <li><i class="fa-solid fa-check"></i> Caja de regalo signature</li>
+            <li><i class="fa-solid fa-check"></i> Diseño personalizado</li>
+          </ul>
+          <a href="https://wa.me/523340187767?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20el%20Paquete%20Premium" class="package-btn">Seleccionar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section class="contact reveal" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-header" style="text-align: left; margin: 0;">
+            <span>Contacto Nara</span>
+            <h2>Estamos listos para crear algo especial</h2>
+            <p>Escribe, llama o ven a conocernos en Tonalá, Jalisco.</p>
+          </div>
+
+          <div style="margin-top: 48px;">
+            <p style="margin-bottom: 24px;"><strong>Ubicación:</strong><br>Avenida Magnolia 142, Tonalá, Jalisco</p>
+            <p style="margin-bottom: 24px;"><strong>Horario:</strong><br>Lun - Vie: 9:00 AM - 6:00 PM<br>Sáb: 10:00 AM - 2:00 PM</p>
+            <div class="social-links" style="display: flex; gap: 24px;">
+              <a href="https://instagram.com/nara.floreria" style="color: var(--text); text-decoration: none; font-weight: 600;">Instagram</a>
+              <a href="https://facebook.com/nara.floreria" style="color: var(--text); text-decoration: none; font-weight: 600;">Facebook</a>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" rows="5" placeholder="Cuéntanos qué arreglo quieres"></textarea>
-        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" />
+          </div>
 
-        <button type="submit" class="contact-submit">Enviar mensaje</button>
-      </form>
+          <div class="form-group">
+            <label for="numero">WhatsApp</label>
+            <input type="tel" id="numero" name="numero" placeholder="Tu número" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos qué arreglo quieres"></textarea>
+          </div>
+
+          <button type="submit" class="contact-submit">Enviar mensaje</button>
+        </form>
+      </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>Nara</h3>
-        <p>Arreglos románticos y personalizados con un estilo sencillo y lujoso. Cada detalle es un mensaje de cariño.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Nara</h3>
+          <p>Arreglos románticos y personalizados con un estilo sencillo y lujoso.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <a href="#hero">Inicio</a>
+          <a href="#about">Nosotras</a>
+          <a href="#catalog">Colección</a>
+          <a href="#contact">Contacto</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>+52 33 4018 7767</p>
+          <p>contacto@narafloreria.com</p>
+        </div>
       </div>
 
-      <div class="footer-links">
-        <h4>Enlaces</h4>
-        <a href="#hero">Inicio</a>
-        <a href="#about">Nosotras</a>
-        <a href="#catalog">Colección</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#festividades">Momentos</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contacto</a>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contacto</h4>
-        <p>Tel: +52 33 4018 7767</p>
-        <p>email: contacto@narafloreria.com</p>
-      </div>
+      <p class="footer-copy">© 2026 Nara. Todos los derechos reservados.</p>
     </div>
-
-    <p class="footer-copy">© 2026 Nara. Todos los derechos reservados.</p>
   </footer>
 
   <!-- Botón flotante de WhatsApp -->
   <a href="https://wa.me/523340187767" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-text">¿Necesitas ayuda?</span>
   </a>
 
   <script src="script.js"></script>
