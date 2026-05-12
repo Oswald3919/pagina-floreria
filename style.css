@@ -268,7 +268,7 @@ p { font-size: 18px; color: var(--muted); }
   background: var(--accent);
   border: none;
   border-radius: 80% 80% 58% 58% / 96% 96% 42% 42%;
-  transform: translate(-66%, -48%) rotate(-36deg) translateY(1px) scale(0.54, 0.86);
+  transform: translate(-57%, -50%) rotate(-10deg) translateY(-1px) scale(0.5, 0.84);
   transform-origin: 50% 92%;
   z-index: 1;
   box-shadow: none;
@@ -286,16 +286,16 @@ p { font-size: 18px; color: var(--muted); }
   border: none;
   border-radius: 80% 80% 58% 58% / 96% 96% 42% 42%;
   opacity: 1;
-  transform: translate(-34%, -48%) rotate(36deg) translateY(1px) scale(0.54, 0.86);
+  transform: translate(-43%, -50%) rotate(10deg) translateY(-1px) scale(0.5, 0.84);
   transform-origin: 50% 92%;
   z-index: 1;
   box-shadow: none;
   transition: transform 0.55s var(--transition), opacity 0.4s var(--transition), background-color 0.4s var(--transition);
 }
 
-.nav-toggle span:nth-child(1) { transform: translate(-62%, -54%) rotate(-18deg) translateY(-3px) scale(0.72, 0.96); }
-.nav-toggle span:nth-child(2) { z-index: 3; transform: translate(-50%, -61%) rotate(0deg) translateY(-5px) scale(0.88, 1.06); }
-.nav-toggle span:nth-child(3) { transform: translate(-38%, -54%) rotate(18deg) translateY(-3px) scale(0.72, 0.96); }
+.nav-toggle span:nth-child(1) { transform: translate(-56%, -54%) rotate(-9deg) translateY(-2px) scale(0.58, 0.92); }
+.nav-toggle span:nth-child(2) { z-index: 3; transform: translate(-50%, -62%) rotate(0deg) translateY(-5px) scale(0.78, 1.1); }
+.nav-toggle span:nth-child(3) { transform: translate(-44%, -54%) rotate(9deg) translateY(-2px) scale(0.58, 0.92); }
 
 .nav-toggle span:nth-child(2)::after {
   content: "";
@@ -307,7 +307,7 @@ p { font-size: 18px; color: var(--muted); }
   background: var(--accent);
   border-radius: 0 0 12px 12px;
   clip-path: polygon(50% 0, 100% 58%, 82% 100%, 18% 100%, 0 58%);
-  transform: translateX(-50%) scale(0.7, 0.7);
+  transform: translateX(-50%) scale(0.48, 0.58);
   transform-origin: 50% 100%;
   transition: transform 0.55s var(--transition), width 0.55s var(--transition), background-color 0.4s var(--transition);
 }
