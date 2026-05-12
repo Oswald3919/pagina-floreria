@@ -1,5 +1,59 @@
 // Premium Animations and Interactions
+const themeStorageKey = 'nara-theme';
+
+const getStoredTheme = () => {
+  try {
+    return localStorage.getItem(themeStorageKey);
+  } catch (error) {
+    return null;
+  }
+};
+
+const initialTheme = getStoredTheme() === 'dark' ? 'dark' : 'light';
+document.documentElement.setAttribute('data-theme', initialTheme);
+
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Theme Toggle
+  const themeToggles = document.querySelectorAll('[data-theme-toggle]');
+
+  const updateThemeControls = (theme) => {
+    const isDark = theme === 'dark';
+    themeToggles.forEach(btn => {
+      const icon = btn.querySelector('i');
+      const label = btn.querySelector('.theme-toggle-label');
+
+      btn.setAttribute('aria-pressed', String(isDark));
+      btn.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+
+      if (icon) {
+        icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      }
+
+      if (label) {
+        label.textContent = isDark ? 'Claro' : 'Oscuro';
+      }
+    });
+  };
+
+  const setTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem(themeStorageKey, theme);
+    } catch (error) {
+      // Theme still changes even if storage is unavailable.
+    }
+    updateThemeControls(theme);
+  };
+
+  updateThemeControls(initialTheme);
+
+  themeToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+  });
+
   // 1. Hero Entry Animation
   const hero = document.getElementById('hero');
   if (hero) {
