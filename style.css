@@ -192,6 +192,11 @@ p { font-size: 18px; color: var(--muted); }
 
 .hero h1 { color: var(--text); opacity: 0; transform: translateY(30px); margin-bottom: 32px; }
 .hero p { color: var(--text); opacity: 0; transform: translateY(40px); font-size: 26px; margin-bottom: 48px; font-family: 'Cormorant Garamond', serif; font-style: italic; }
+.hero-cta-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .hero button {
   background: var(--text);
   color: var(--white);
