@@ -128,6 +128,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 8.1 Blog Read More Toggle
+  const blogTriggers = document.querySelectorAll('.blog-btn-trigger');
+  blogTriggers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.blog-card');
+      card.classList.toggle('active');
+      
+      // Update button text
+      if (card.classList.contains('active')) {
+        btn.textContent = 'Leer menos';
+      } else {
+        btn.textContent = 'Leer más';
+      }
+    });
+  });
+
   // 9. Contact Form Logic (WhatsApp)
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
