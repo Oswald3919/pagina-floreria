@@ -46,31 +46,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. Mobile Menu Toggle
   const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.navbar nav');
+  const navbarContainer = document.querySelector('.navbar');
+  const navLinks = document.querySelectorAll('nav a');
   
-  if (navToggle && nav) {
+  if (navToggle) {
     navToggle.addEventListener('click', () => {
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-      // Basic toggle, could be improved with a class
-      navbar.classList.toggle('menu-open');
+      navbarContainer.classList.toggle('menu-open');
+      // Prevent scroll when menu is open
+      document.body.style.overflow = navbarContainer.classList.contains('menu-open') ? 'hidden' : '';
     });
   }
 
-  // 6. Smooth Scroll for Nav Links
-  document.querySelectorAll('nav a').forEach(anchor => {
+  // 6. Close Menu on Link Click & Smooth Scroll
+  navLinks.forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
+      
+      // Close menu
+      navbarContainer.classList.remove('menu-open');
+      document.body.style.overflow = '';
+
       const targetId = this.getAttribute('href');
       const target = document.querySelector(targetId);
       if (target) {
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = target.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
         window.scrollTo({
-          top: target.offsetTop - 80,
+          top: offsetPosition,
           behavior: 'smooth'
         });
-        // Close mobile menu if open
-        if (window.innerWidth <= 768) {
-          nav.style.display = 'none';
-        }
       }
     });
   });
